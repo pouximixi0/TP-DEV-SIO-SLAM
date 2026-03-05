@@ -4,52 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact</title>
+    <title>Inscription</title>
     <link rel="stylesheet" href="../bootstrap-5.3.8/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../bootstrap-5.3.8/dist/js/bootstrap.js"></script>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="img/logo.png" alt="Logo" class="logo">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="articles.html">Articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="QSN.html">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light ms-2 px-3" href="Inscription.html">Inscription</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <H1>Des questions ?</H1>
-    <p>Nous sommes la pour vous aidez, un problème, un bug ? Remplissez ce formulaire afin de nous contacté. Nous ferons
-        tout notre possible pour vous accompagnez et vous aidez dans votre experience sur notre site.</p>
-    <p>Un délai de 24heures apres envoie du formulaire sera nécessaire avant d'etre lus par nos équipes.<br>Merci de
-        votre compréhension.</p>
-
-
-
+    <?php include '../component/navbar.php'; ?>
+    <p>Veuillez remplir ces champs ci-dessous pour vous inscrire a notre site.</p>
     <div class="container">
         <div class="row gy-4 gy-md-5 gy-lg-0 align-items-md-center">
             <div class="col-12 col-lg-6">
@@ -73,6 +36,12 @@
                                     <input type="email" class="form-control" id="email" name="email" value="" required>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <label for="inputPassword4" class="form-label">Mot de passe <span
+                                        class="text-danger">*</span></label>
+                                
+                                <input type="inputPassword4" class="form-control" id="inputPassword4" name="inputPassword4" value="" required>
+                            </div>
                             <div class="col-12 col-md-6">
                                 <label for="phone" class="form-label">Téléphone</label>
                                 <div class="input-group">
@@ -87,17 +56,28 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <label for="subject" class="form-label">Objet <span class="text-danger">*</span></label>
-                                <input type="text" class="form-control" id="subject" name="subject" value="" required>
+                                <label for="inputAddress2" class="form-label">Adresse </label>
+                                <input type="text" class="form-control" id="inputAddress2"
+                                    placeholder="67 rue du six seven">
                             </div>
-                            <div class="col-12">
-                                <label for="message" class="form-label">Message <span
-                                        class="text-danger">*</span></label>
-                                <textarea class="form-control" id="message" name="message" rows="3" required></textarea>
+                            <div class="col-md-6">
+                                <label for="inputCity" class="form-label">Ville</label>
+                                <input type="text" class="form-control" id="inputCity">
+                            </div>
+                            <div class="col-md-4">
+                                <label for="inputState" class="form-label">Région</label>
+                                <select id="inputState" class="form-select">
+                                    <option selected>Choisir...</option>
+                                    <option>...</option>
+                                </select>
+                            </div>
+                            <div class="col-md-2">
+                                <label for="inputZip" class="form-label">Postale</label>
+                                <input type="text" class="form-control" id="inputZip">
                             </div>
                             <div class="col-12">
                                 <div class="d-grid">
-                                    <button class="btn btn-primary btn-lg" type="submit">Send Message</button>
+                                    <button class="btn btn-primary btn-lg" type="submit">S'inscrire</button>
                                 </div>
                             </div>
                         </div>
@@ -107,6 +87,8 @@
         </div>
     </div>
     </section>
+<?php include '../component/footer.php'; ?>
+
 </body>
 
 </html>

@@ -10,37 +10,7 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="../img/logo.png" alt="Logo" class="logo">
-            </a>
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../index.html">Accueil</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="articles.html">Articles</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="QSN.html">À propos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="Contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link btn btn-outline-light ms-2 px-3" href="Inscription.html">Inscription</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <?php include '../component/navbar.php'; ?>    
 
     <section class="bg-dark text-white py-5">
         <div class="container">
@@ -117,36 +87,7 @@
         </div>
     </section>
 
-    <footer class="bg-dark text-white py-4 mt-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5>Bleach Commerce</h5>
-                    <p class="text-muted">Votre boutique officielle</p>
-                </div>
-                <div class="col-md-4 mb-3 mb-md-0">
-                    <h5>Liens rapides</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-muted text-decoration-none">Mentions légales</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">CGV</a></li>
-                        <li><a href="#" class="text-muted text-decoration-none">Politique de confidentialité</a></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h5>Suivez-nous</h5>
-                    <div class="d-flex gap-3">
-                        <a href="#" class="text-white">Facebook</a>
-                        <a href="#" class="text-white">Instagram</a>
-                        <a href="#" class="text-white">Twitter</a>
-                    </div>
-                </div>
-            </div>
-            <hr class="border-secondary my-3">
-            <div class="text-center text-muted">
-                <small>&copy; 2026 Bleach Commerce. Tous droits réservés.</small>
-            </div>
-        </div>
-    </footer>
+    <?php include '../component/footer.php'; ?>
 
     <script src="../bootstrap-5.3.8/dist/js/bootstrap.bundle.js"></script>
     <script src="../js/index.js"></script>
