@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Qui sommes nous ?</title>
+    <title>Qui sommes-nous ?</title>
     <link rel="stylesheet" href="../bootstrap-5.3.8/dist/css/bootstrap.css">
     <link rel="stylesheet" href="../css/index.css">
     <script src="../bootstrap-5.3.8/dist/js/bootstrap.js"></script>
@@ -13,13 +13,13 @@
 
 <body>
     <?php include '../component/navbar.php'; ?>
-    <h1>Qui sommes nous ?</h1>
-    <p>Nous sommes deux étudiants de BTS SIO qui avons décidé de créer notre propre site de ventes en ligne.<br>
+    <h1>Qui sommes-nous ?</h1>
+    <p>Nous sommes deux étudiants de BTS SIO qui avons décidé de créer notre propre site de vente en ligne.<br>
     Etant de grands fans de l'animé Bleach, ce site portera sur tout ce qui entoure cet univers. <br>
     Le but est de pouvoir offrir la posibilité à d'autres fans, comme nous, de se procurer des produits de leur anime favori !
     Ce site est donc piloté par Alexis et Juventrain. L'entièreté de ce site est fait par nos soins afin de garantir une expérience enrichissante<br>
     pour nos clients.</p>
-    <p>Pour plus d'information rendez vous sur <a href="Contact.php">contact</a></p>
+    <p>Pour plus d'informations rendez vous sur <a href="Contact.php">contact</a></p>
     <img src="../img/fond_QSN.jpg" alt="image">
 <?php include '../component/footer.php'; ?>
 

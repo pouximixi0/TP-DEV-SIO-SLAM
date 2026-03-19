@@ -14,9 +14,9 @@
 
 <?php include '../component/navbar.php'; ?>
     <H1>Des questions ?</H1>
-    <p>Nous sommes la pour vous aidez, un problème, un bug ? Remplissez ce formulaire afin de nous contacté. Nous ferons
-        tout notre possible pour vous accompagnez et vous aidez dans votre experience sur notre site.</p>
-    <p>Un délai de 24heures apres envoie du formulaire sera nécessaire avant d'etre lus par nos équipes.<br>Merci de
+    <p>Nous sommes la pour vous aider, un problème, un bug ? Remplissez ce formulaire afin de nous contacter. Nous ferons
+        tout notre possible pour vous accompagner et vous aider dans votre expérience sur notre site.</p>
+    <p>Un délai de 24 heures après envoi du formulaire sera nécessaire avant d'être lu par nos équipes.<br>Merci de
         votre compréhension.</p>
 
 
@@ -25,7 +25,7 @@
         <div class="row gy-4 gy-md-5 gy-lg-0 align-items-md-center">
             <div class="col-12 col-lg-6">
                 <div class="border overflow-hidden">
-                    <form action="#!">
+                    <form action="../123/contact_data.php" method="post">
                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                             <div class="col-12">
                                 <label for="fullname" class="form-label">Nom <span class="text-danger">*</span></label>
