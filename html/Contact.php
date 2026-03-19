@@ -25,7 +25,7 @@
         <div class="row gy-4 gy-md-5 gy-lg-0 align-items-md-center">
             <div class="col-12 col-lg-6">
                 <div class="border overflow-hidden">
-                    <form action="../123/contact_data.php" method="post">
+                    <form action="/interact/contact_data.php" method="post">
                         <div class="row gy-4 gy-xl-5 p-4 p-xl-5">
                             <div class="col-12">
                                 <label for="fullname" class="form-label">Nom <span class="text-danger">*</span></label>
