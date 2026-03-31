@@ -1,3 +1,29 @@
+<?php
+$conn = new mysqli('localhost', 'root', '', 'ecommerce');
+$articles = [];
+$dbError = null;
+
+if ($conn->connect_error) {
+    $Error = $conn->connect_error;
+} else {
+    $conn->set_charset('utf8mb4');
+
+    $sql = "SELECT p.id_produit, p.nom, p.description, p.prix_actuel, p.stock_dispo, p.image_url FROM Produit p ORDER BY p.id_produit DESC";
+
+    $result = $conn->query($sql);
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $articles[] = $row;
+        }
+        $result->free();
+    } else {
+        $Error = 'Erreur lors du chargement des articles.';
+    }
+
+    $conn->close();
+}
+
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -23,66 +49,28 @@
         <div class="container">
             <h2 class="text-center mb-5">Nos Articles Populaires</h2>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="../img/figurine.jpg" class="card-img-top" alt="Figurine Ichigo">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Figurine</h5>
-                            <p class="card-text text-muted">Figurine collector</p>
-                            <div class="mt-auto">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0 text-primary">39,99€</span>
-                                    <button class="btn btn-primary btn-sm">Ajouter</button>
+
+            <?php if (empty($articles)){
+                echo '<div class="col-12"><p class="text-center">Aucun article disponible pour le moment.</p></div>';
+                }else {
+                    foreach ($articles as $article) {
+                        echo '
+                        <div class="col-md-4">
+                            <div class="card h-100">
+                                <img src="' . htmlspecialchars($article['image_url']) . '" class="card-img-top" alt="' . htmlspecialchars($article['nom']) . '">
+                                <div class="card-body d-flex flex-column">
+                                    <h5 class="card-title">' . htmlspecialchars($article['nom']) . '</h5>
+                                    <p class="card-text">' . htmlspecialchars($article['description']) . '</p>
+                                    <div class="mt-auto">
+                                        <p class="h5 text-primary">' . number_format($article['prix_actuel'], 2, ',', ' ') . ' €</p>
+                                        <a href="article_detail.php?id=' . $article['id_produit'] . '" class="btn btn-outline-primary w-100">Voir Détails</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="../img/tshirt.jpg" class="card-img-top" alt="T-shirt Bleach">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">T-shirt</h5>
-                            <p class="card-text text-muted">Haute qualité</p>
-                            <div class="mt-auto">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0 text-primary">24,99€</span>
-                                    <button class="btn btn-primary btn-sm">Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="../img/poster.avif" class="card-img-top" alt="Poster Bleach">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">Poster HD</h5>
-                            <p class="card-text text-muted">Imprimé en haute qualité</p>
-                            <div class="mt-auto">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0 text-primary">14,99€</span>
-                                    <button class="btn btn-primary btn-sm">Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card h-100 shadow-sm">
-                        <img src="../img/dvd.jpg" class="card-img-top" alt="DVD Integral Bleach">
-                        <div class="card-body d-flex flex-column">
-                            <h5 class="card-title">DVD Integral</h5>
-                            <p class="card-text text-muted">Édition collector</p>
-                            <div class="mt-auto">
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <span class="h5 mb-0 text-primary">214,99€</span>
-                                    <button class="btn btn-primary btn-sm">Ajouter</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                        </div>';
+                    }
+                } 
+            ?>
             </div>
         </div>
     </section>
