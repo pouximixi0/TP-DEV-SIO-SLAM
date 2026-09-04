@@ -2,7 +2,6 @@
 if (!empty($_POST['email']) && !empty($_POST['inputPassword4'])) {
     $email = $_POST['email'];
     $password = hash('sha256', $_POST['inputPassword4']);
-    $address = $_POST['address'];
     $telephone = $_POST['telephone'];
     $nom = $_POST['nom'];
     $conn = new mysqli('localhost', 'root', '', 'ecommerce');
@@ -12,8 +11,8 @@ if (!empty($_POST['email']) && !empty($_POST['inputPassword4'])) {
         $status = "DB_error";
     }
 
-    $stmt = $conn->prepare("INSERT INTO client (email, password, nom, address, telephone) VALUES (?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssss", $email, $password, $nom, $address, $telephone);
+    $stmt = $conn->prepare("INSERT INTO client (email, mot_de_passe, nom, telephone) VALUES (?, ?, ?, ?)");
+    $stmt->bind_param("ssss", $email, $password, $nom, $telephone);
 
 
     if ($stmt->execute()) {
