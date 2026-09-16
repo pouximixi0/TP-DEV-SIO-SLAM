@@ -1,0 +1,11 @@
+form {
+  background-color: var(--orange);
+  border-radius: 10px;
+  width: 400px;
+  padding: 15px;
+}
+
+form > label,
+form > input {
+  padding: 20px 0;
+}

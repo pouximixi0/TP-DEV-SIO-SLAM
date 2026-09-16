@@ -1,0 +1,264 @@
+:root {
+  --noir: #363636;
+  --blanc: #f4f1ec;
+  --grisClair: #ded9d1;
+  --gris: #5b564f;
+  --orange: #e8481f;
+}
+31660 body {
+  margin: 0;
+  background-color: var(--blanc);
+  color: var(--noir);
+  font-family: Arial, sans-serif;
+}
+
+.headerSite {
+  display: flex;
+  align-items: stretch;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  background-color: var(--blanc);
+  border-bottom: 1px solid var(--grisClair);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 0;
+}
+
+.logo img {
+  height: 50px;
+  display: block;
+}
+
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: auto;
+}
+
+.navbarAccount {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.navbar a,
+.navbarAccount a:not(.btn-panier) {
+  display: flex;
+  align-items: center;
+  padding: 0 18px;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--noir);
+
+  transition: all 0.7s ease;
+
+  margin-top: 10px;
+  border-radius: 15px;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+
+.navbar a:hover,
+.navbarAccount a:not(.btn-panier):hover {
+  background-color: var(--noir);
+  color: var(--blanc);
+  transform: translateY(-2px);
+}
+
+.navbar a.active,
+.navbarAccount a.active {
+  font-weight: 700;
+  box-shadow: inset 0 -3px 0 var(--orange);
+}
+.navbarAccount a.btn-panier {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  align-self: center;
+  height: 40px;
+  margin-left: 14px;
+  padding: 0 15px;
+  border-radius: 10px;
+  background-color: var(--noir);
+  color: var(--blanc);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  transition: background-color 0.3s ease;
+}
+
+.navbarAccount a.btn-panier:hover {
+  background-color: var(--orange);
+  color: var(--noir);
+}
+
+.badge {
+  padding: 2px 8px;
+  border-radius: 10px;
+  background-color: var(--orange);
+  color: var(--noir);
+  font-size: 12px;
+}
+
+.headerSite a:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 2px;
+}
+
+.footerSite {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.footerColonnes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 45px 20px;
+}
+
+.footerColonne {
+  display: block;
+  margin-bottom: 9px;
+}
+
+.footerColonnes a:hover {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.bandeau {
+  margin: 0;
+  padding: 10px 20px;
+  background-color: #efebe4;
+  border-bottom: 1px solid var(--grisClair);
+  font-size: 13px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 26px;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.btnOrange {
+  background-color: var(--orange);
+  color: var(--noir);
+}
+
+.btnNoir {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.btnContour {
+  border-color: var(--noir);
+  color: var(--noir);
+}
+
+.btn:hover {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.trait {
+  width: 64px;
+  height: 5px;
+  border-radius: 3px;
+  background-color: var(--orange);
+}
+center {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--grisClair);
+}
+.hero,
+.presentation {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  border-bottom: 1px solid var(--grisClair);
+}
+
+.heroTexte,
+.presentationTexte {
+  flex: 1 1 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+}
+
+.heroTexte h1 {
+  margin: 0;
+  font-size: 60px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.heroTexte p,
+.presentationTexte p {
+  max-width: 42ch;
+  margin: 0;
+  color: var(--gris);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.heroImages {
+  flex: 340px;
+  position: relative;
+  min-height: 420px;
+  background-color: var(--noir);
+}
+
+.heroImages img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.7s;
+}
+
+.heroImages img.visible {
+  opacity: 1;
+}
+
+.presentation > img {
+  flex: 1 1 300px;
+  width: 100%;
+  min-height: 340px;
+  object-fit: cover;
+}
+
+.presentationTexte h2 {
+  margin: 0;
+  font-size: 30px;
+  line-height: 1.2;
+  text-transform: uppercase;
+}

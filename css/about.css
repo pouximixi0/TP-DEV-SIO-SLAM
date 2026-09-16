@@ -1,0 +1,14 @@
+div {
+    display: block;
+    unicode-bidi: isolate;
+}
+
+.imgAbout {
+    border-radius: 15px;
+    width: 100%;
+}
+
+a {
+    color: var(--orange);
+    text-decoration:none;
+}
