@@ -1,27 +1,35 @@
 <?php
-include("db.php");
-if (isset($_POST["nom"]) && isset($_POST["inputPassword"])) {
-    $nom = $_POST["nom"];
-    $password = hash('sha256', $_POST["inputPassword"]);
+session_start();
+include "db.php";
 
-    $stmt = $conn->prepare("SELECT * FROM Client WHERE nom = ? AND mot_de_passe = ?");
-    $stmt->bind_param("ss", $nom, $password);
-    $stmt->execute();
-    $result = $stmt->get_result();
-    $row = $result->fetch_assoc();
-    if ($result->num_rows > 0) {
-        session_start();
-        $_SESSION["user_name"] = $row["nom"];
-        header("Location: ../index.php");
-        exit();
-    } else {
-        header("Location: ../html/Connexion.php?status=error");
-        exit();
-    }
-    $stmt->close();
-    $conn->close();
-} else {
-    header("Location: ../html/Connexion.php?status=error");
+if (empty($_POST["email"]) || empty($_POST["mdp"])) {
+    header("Location: /html/connexion.php?status=vide");
     exit();
 }
-?>
+
+$email = trim($_POST["email"]);
+$mdp = hash('sha256', $_POST["mdp"]);
+
+$stmt = $conn->prepare("SELECT id_client, nom FROM client WHERE email = ? AND mot_de_passe = ?");
+$stmt->bind_param("ss", $email, $mdp);
+$stmt->execute();
+$result = $stmt->get_result();
+$client = $result->fetch_assoc();
+
+$stmt->close();
+$conn->close();
+
+if (!$client) {
+    header("Location: /html/connexion.php?status=error");
+    exit();
+}
+
+$_SESSION["user_id"] = $client["id_client"];
+$_SESSION["user_name"] = $client["nom"];
+
+if (isset($_POST["retour"]) && $_POST["retour"] == "panier") {
+    header("Location: /html/panier.php");
+} else {
+    header("Location: /index.php");
+}
+exit();

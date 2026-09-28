@@ -1,0 +1,69 @@
+.compte {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 560px;
+  margin: 40px auto 0;
+  border: 1px solid var(--grisClair);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 10px 20px rgba(54, 54, 54, 0.05);
+}
+
+.compteFormulaire {
+  flex: 1 1 380px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 50px 45px;
+  box-sizing: border-box;
+}
+
+.compteFormulaire h1 {
+  margin: 0;
+  font-size: 40px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.compteFormulaire .message {
+  margin: 0;
+}
+
+.compteFormulaire .btn {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.facultatif {
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0;
+  color: var(--gris);
+}
+
+.compteLien {
+  margin: 0;
+  font-size: 14px;
+  color: var(--gris);
+}
+
+.compteLien a {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.compteLien a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .compte {
+    margin: 20px 16px 0;
+  }
+
+  .compteFormulaire {
+    padding: 30px 22px;
+  }
+}

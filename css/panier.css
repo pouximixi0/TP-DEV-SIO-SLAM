@@ -1,0 +1,253 @@
+.panier {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
+}
+
+.panierVide {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px dashed var(--grisClair);
+  border-radius: 12px;
+}
+
+.panierVide h2 {
+  margin: 0;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.panierVide p {
+  max-width: 40ch;
+  margin: 0;
+  color: var(--gris);
+  line-height: 1.6;
+}
+
+.panierContenu {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.panierLignes {
+  flex: 2 1 500px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.panierLigne {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+  padding: 16px;
+  background-color: #fff;
+  border: 1px solid var(--grisClair);
+  border-radius: 12px;
+}
+
+.panierLigne img {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  background-color: var(--grisClair);
+}
+
+.panierInfos {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.panierNom {
+  color: var(--noir);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.panierNom:hover {
+  color: var(--orange);
+}
+
+.panierPrix {
+  margin: 0;
+  color: var(--gris);
+  font-size: 14px;
+}
+
+.panierQuantite {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.panierQuantite label {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.panierQuantite input {
+  width: 60px;
+  padding: 8px;
+  border: 1px solid var(--grisClair);
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 15px;
+  text-align: center;
+}
+
+.panierQuantite input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.panierMaj {
+  padding: 9px 12px;
+  border: 1px solid var(--noir);
+  border-radius: 8px;
+  background: none;
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--noir);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.panierMaj:hover {
+  background-color: var(--noir);
+  color: var(--blanc);
+}
+
+.panierSousTotal {
+  min-width: 90px;
+  margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--orange);
+  text-align: right;
+}
+
+.panierSupprimer {
+  width: 34px;
+  height: 34px;
+  border: none;
+  border-radius: 50%;
+  background-color: var(--grisClair);
+  font-size: 20px;
+  line-height: 1;
+  color: var(--gris);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.panierSupprimer:hover {
+  background-color: var(--orange);
+  color: var(--blanc);
+}
+
+.panierVider {
+  align-self: flex-end;
+}
+
+.panierVider button {
+  padding: 0;
+  border: none;
+  background: none;
+  font-family: inherit;
+  font-size: 13px;
+  color: var(--gris);
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.panierVider button:hover {
+  color: var(--orange);
+}
+
+.panierResume {
+  flex: 1 1 280px;
+  position: sticky;
+  top: 90px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 28px;
+  background-color: var(--noir);
+  color: var(--blanc);
+  border-radius: 12px;
+}
+
+.panierResume h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+.panierResumeLigne {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  color: var(--grisClair);
+}
+
+.panierResumeTotal {
+  padding-top: 14px;
+  border-top: 1px solid var(--gris);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--blanc);
+}
+
+.panierResume .btn {
+  display: block;
+  width: 100%;
+  margin-top: 8px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.panierResume .btnNoir {
+  border-color: var(--blanc);
+}
+
+.panierResume .btnNoir:hover,
+.panierResume .btnOrange:hover {
+  background-color: var(--blanc);
+  color: var(--noir);
+}
+
+.panierNote {
+  margin: 0;
+  font-size: 13px;
+  text-align: center;
+  color: var(--grisClair);
+}
+
+.panierNote a {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .panierLigne {
+    justify-content: space-between;
+  }
+
+  .panierResume {
+    position: static;
+  }
+}

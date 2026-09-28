@@ -23,7 +23,7 @@ if ($conn->connect_error) {
 
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
     <meta charset="UTF-8">
@@ -56,6 +56,8 @@ if ($conn->connect_error) {
         }
         ?>
     </section>
+
+    <?php include '../components/footer.php'; ?>
 </body>
 
 </html>

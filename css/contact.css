@@ -1,11 +1,67 @@
-form {
-  background-color: var(--orange);
-  border-radius: 10px;
-  width: 400px;
-  padding: 15px;
+.contact {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 40px;
 }
 
-form > label,
-form > input {
-  padding: 20px 0;
+.contactInfos {
+  flex: 1 1 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.contactBloc h3 {
+  margin: 0 0 6px;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contactBloc p {
+  max-width: 40ch;
+  margin: 0;
+  color: var(--gris);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.contactBloc a {
+  color: var(--orange);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.contactBloc a:hover {
+  text-decoration: underline;
+}
+
+.contactInfos img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 10px;
+  filter: grayscale(30%);
+}
+
+.contactFormulaire {
+  flex: 2 1 420px;
+  padding: 35px;
+  background-color: #fff;
+  border: 1px solid var(--grisClair);
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(54, 54, 54, 0.05);
+}
+
+.contactFormulaire .btn {
+  align-self: flex-start;
+}
+
+@media (max-width: 600px) {
+  .contactFormulaire {
+    padding: 22px;
+  }
 }
