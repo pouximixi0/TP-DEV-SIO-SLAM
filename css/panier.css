@@ -91,44 +91,43 @@
   gap: 8px;
 }
 
-.panierQuantite label {
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: var(--gris);
-}
-
-.panierQuantite input {
-  width: 60px;
-  padding: 8px;
-  border: 1px solid var(--grisClair);
-  border-radius: 8px;
-  font-family: inherit;
-  font-size: 15px;
-  text-align: center;
-}
-
-.panierQuantite input:focus {
-  outline: none;
-  border-color: var(--orange);
-}
-
-.panierMaj {
-  padding: 9px 12px;
+.panierPas {
+  width: 32px;
+  height: 32px;
   border: 1px solid var(--noir);
   border-radius: 8px;
   background: none;
   font-family: inherit;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 700;
+  line-height: 1;
   color: var(--noir);
   cursor: pointer;
   transition: all 0.3s ease;
 }
 
-.panierMaj:hover {
+.panierPas:hover {
   background-color: var(--noir);
   color: var(--blanc);
+}
+
+.panierPas:disabled {
+  border-color: var(--grisClair);
+  color: var(--grisClair);
+  cursor: not-allowed;
+}
+
+.panierPas:disabled:hover {
+  background: none;
+  color: var(--grisClair);
+}
+
+.panierNombre {
+  min-width: 28px;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--noir);
+  text-align: center;
 }
 
 .panierSousTotal {

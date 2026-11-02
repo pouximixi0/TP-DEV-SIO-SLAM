@@ -50,7 +50,7 @@ body {
 }
 
 .navbar a,
-.navbarAccount a:not(.btn-panier) {
+.navbarAccount a:not(.btnPanier) {
   display: flex;
   align-items: center;
   padding: 0 18px;
@@ -70,7 +70,7 @@ body {
 }
 
 .navbar a:hover,
-.navbarAccount a:not(.btn-panier):hover {
+.navbarAccount a:not(.btnPanier):hover {
   background-color: var(--noir);
   color: var(--blanc);
   transform: translateY(-2px);
@@ -81,7 +81,7 @@ body {
   font-weight: 700;
   box-shadow: inset 0 -3px 0 var(--orange);
 }
-.navbarAccount a.btn-panier {
+.navbarAccount a.btnPanier {
   display: flex;
   align-items: center;
   gap: 9px;
@@ -100,7 +100,7 @@ body {
   transition: background-color 0.3s ease;
 }
 
-.navbarAccount a.btn-panier:hover {
+.navbarAccount a.btnPanier:hover {
   background-color: var(--orange);
   color: var(--noir);
 }

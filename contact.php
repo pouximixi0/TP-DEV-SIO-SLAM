@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $erreurs = [];
 $envoye = false;
 $nom = "";
@@ -41,12 +43,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bleach-commerce contact</title>
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="../css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contact.css">
 </head>
 
 <body>
-    <?php include "../components/navbar.php"; ?>
+    <?php include "config/header.php"; ?>
 
     <section class="pageTitre">
         <h1>Contactez-nous</h1>
@@ -60,7 +62,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <h3>Par mail</h3>
                 <a href="mailto:contact@bleach-commerce.fr">contact@bleach-commerce.fr</a>
             </div>
-            <img src="/img/fond_QSN.jpg" alt="Bleach">
+            <img src="img/fond_QSN.jpg" alt="Bleach">
         </div>
 
         <div class="contactFormulaire">
@@ -105,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         </div>
     </section>
 
-    <?php include '../components/footer.php'; ?>
+    <?php include 'config/footer.php'; ?>
 </body>
 
 </html>

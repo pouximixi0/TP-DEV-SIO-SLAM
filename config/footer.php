@@ -1,27 +1,27 @@
 <footer class="footerSite">
     <div class="footerHaut">
         <div class="footerMarque">
-            <img src="/img/logo.png" alt="Logo Bleach Commerce">
+            <img src="img/logo.png" alt="Logo Bleach Commerce">
             <p>Figurines, vêtements, posters et accessoires autour de l'univers de Bleach. Un catalogue monté à la main par deux fans.</p>
         </div>
 
         <div class="footerColonne">
             <h3>Navigation</h3>
-            <a href="/index.php">Accueil</a>
-            <a href="/html/articles.php">Articles</a>
-            <a href="/html/about.php">À propos</a>
-            <a href="/html/contact.php">Contact</a>
+            <a href="index.php">Accueil</a>
+            <a href="articles.php">Articles</a>
+            <a href="apropos.php">À propos</a>
+            <a href="contact.php">Contact</a>
         </div>
 
         <div class="footerColonne">
             <h3>Mon compte</h3>
             <?php if (!empty($_SESSION['user_name'])) { ?>
-                <a href="/html/panier.php">Mon panier</a>
-                <a href="/include/logout.php">Déconnexion</a>
+                <a href="panier.php">Mon panier</a>
+                <a href="deconnexion.php">Déconnexion</a>
             <?php } else { ?>
-                <a href="/html/connexion.php">Connexion</a>
-                <a href="/html/inscription.php">Inscription</a>
-                <a href="/html/panier.php">Mon panier</a>
+                <a href="connexion.php">Connexion</a>
+                <a href="inscription.php">Inscription</a>
+                <a href="panier.php">Mon panier</a>
             <?php } ?>
         </div>
 

@@ -1,56 +1,39 @@
-.container {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 20px;
-}
-
-.card {
-  background-color: var(--blanc);
-  border: 1px solid var(--grisClair);
-  border-radius: 8px;
-  overflow: hidden;
-  max-width: 300px;
-  box-shadow: 0 4px 6px rgba(54, 54, 54, 0.05);
-  transition: transform 0.2s ease;
-}
-
-.card:hover {
+.carte:hover {
   transform: translateY(-5px);
 }
 
-.card img {
+.carte img {
   width: 100%;
   height: 200px;
   object-fit: cover;
   background-color: var(--grisClair);
 }
 
-.card-body {
+.carteCorps {
   padding: 15px;
 }
 
-.card-title {
+.carteTitre {
   color: var(--noir);
   font-size: 1.25rem;
   margin-bottom: 10px;
 }
 
-.card-text {
+.carteTexte {
   color: var(--gris);
   font-size: 0.9rem;
   line-height: 1.4;
   margin-bottom: 15px;
 }
 
-.card-price {
+.cartePrix {
   color: var(--orange);
   font-weight: bold;
   font-size: 1.2rem;
   margin-bottom: 15px;
 }
 
-.btn-primary {
+.btnDetail {
   display: block;
   text-align: center;
   background-color: var(--noir);
@@ -62,12 +45,12 @@
   transition: background-color 0.2s ease;
 }
 
-.btn-primary:hover {
+.btnDetail:hover {
   background-color: var(--orange);
   color: var(--blanc);
 }
 
-.container {
+.grilleArticles {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
@@ -78,7 +61,7 @@
   margin: 0 auto;
 }
 
-.card {
+.carte {
   background-color: var(--blanc);
   border: 1px solid var(--grisClair);
   border-radius: 8px;
@@ -87,4 +70,50 @@
   max-width: 300px;
   box-shadow: 0 4px 6px rgba(54, 54, 54, 0.05);
   transition: transform 0.2s ease;
+}
+
+.carte .ajoutPanier {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.carte .ajoutPanier label {
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--gris);
+}
+
+.carte .ajoutPanier input {
+  width: 55px;
+  padding: 9px 6px;
+  border: 1px solid var(--grisClair);
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: 15px;
+  text-align: center;
+}
+
+.carte .ajoutPanier input:focus {
+  outline: none;
+  border-color: var(--orange);
+}
+
+.carte .ajoutPanier button {
+  flex: 1;
+  padding: 9px 10px;
+  font-size: 14px;
+}
+
+.carte .carteStock.rupture {
+  display: block;
+  margin-top: 10px;
+  padding: 9px 12px;
+  border-radius: 4px;
+  background-color: #fbe5e0;
+  color: #8a2a12;
+  font-size: 0.9rem;
+  text-align: center;
 }

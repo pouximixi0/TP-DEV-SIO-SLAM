@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -10,14 +13,14 @@
 
 <body>
 
-    <?php include 'components/navbar.php'; ?>
+    <?php include 'config/header.php'; ?>
 
     <section class="hero">
         <div class="heroTexte">
             <h1>Bienvenue sur Bleach Commerce</h1>
             <div class="trait"></div>
             <p>Figurines, vêtements, livres, posters, cartes et tous autres accessoires.</p>
-            <a href="html/articles.php" class="btn btnOrange">Voir les articles</a>
+            <a href="articles.php" class="btn btnOrange">Voir les articles</a>
         </div>
 
         <div class="heroImages">
@@ -28,16 +31,16 @@
     </section>
 
     <section class="presentation">
-        <img src="img/QSN.jpg" alt="Alexis et Juventrain">
+        <img src="img/QSN.jpg" alt="Alexis et Juventin">
 
         <div class="presentationTexte">
             <h2>Deux étudiants de BTS SIO, fans de Bleach</h2>
             <p>Le catalogue est monté à la main, article par article. Les commandes sont préparées et expédiées par nous, sous 48 h.</p>
-            <a href="html/contact.php" class="btn btnContour">Nous contacter</a>
+            <a href="contact.php" class="btn btnContour">Nous contacter</a>
         </div>
     </section>
 
-    <?php include 'components/footer.php'; ?>
+    <?php include 'config/footer.php'; ?>
     <script src="js/index.js"></script>
 
 </body>
